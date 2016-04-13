@@ -13,8 +13,8 @@ class Location
 	 */
 	public static function getArrayByCep($cep=''){
 		if ($cep) {		
-			//http://cep.correiocontrol.com.br/
-			return json_decode(file_get_contents("http://cep.correiocontrol.com.br/".$cep.".json"));
+			//http://api.postmon.com.br/v1/cep
+			return json_decode(file_get_contents("http://api.postmon.com.br/v1/cep/".$cep));
 		}
 		return NULL;
 	}
